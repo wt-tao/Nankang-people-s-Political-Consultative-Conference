@@ -1,0 +1,10 @@
+<!--发布-->
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view>
+<view class="container-release">
+<textarea class="release" name="Content" placeholder="说说你对活动的看法"></textarea>
+</view>
+ <button size="mini"class="button-release" formType="submit"> 发表</button>
+</view>
+ </form>

@@ -1,0 +1,38 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+<import src="../../../src/wetoast.wxml"/>
+<!--顶部-->
+<!--顶部-->
+<view class="top">
+    <view class="detail-title">{{list.Title}}</view>
+  <view class="detail-other">
+    <text class="date">发布时间：{{list.Time}}</text>
+    <text class="other">作者：{{list.Source}}</text>
+  </view>
+</view>
+<!--中部-->
+<scroll-view scroll-y="true" class="midden"  bindscroll="scroll">
+     <view class="context">
+    <template is="wxParse" data="{{wxParseData:da.nodes}}"/>
+    </view>
+</scroll-view>
+
+<!--底部-->
+<view class="foot" wx:for="{{page}}">
+  <view class="page-title">
+    <view class="title-footUp">上一篇：</view>
+    <text class="footUp-text" bindtap="Prev" id="{{item.Prev.PrevID}}">{{item.Prev.PrevTitle}}</text>
+  </view>
+  <view class="page-title">
+    <view class="title-footDown">下一篇：</view>
+    <text class="footUp-text" bindtap="Next" id="{{item.Next.NextID}}" >{{item.Next.NextTitle}}</text>
+  </view>
+    <template is="wetoast" data="{{...__wetoast__}}"/>
+
+<view class="praise-foot">
+  <image class="icon-parise" src="../../../images/collect@2x.png"></image>
+  <text class="parise" bindtap='parise' id="{{list.ID}}">点赞({{view}})</text>
+   <image class="icon-conment" src="../../../images/message@2x.png"></image>
+  <text class="parise" bindtap="comment">评论({{list.Recommend}})</text>
+</view>
+</view>
+

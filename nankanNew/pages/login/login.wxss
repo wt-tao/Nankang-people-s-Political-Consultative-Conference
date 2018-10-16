@@ -1,0 +1,34 @@
+
+.page,.bg{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.attentionLb {
+    margin-top:120%; 
+    position: absolute;
+    right: 320rpx;
+    font-size: 36rpx;
+    color: #fff;
+}
+.icon {
+    margin-top:140%; 
+    position: absolute;
+    right: 340rpx;
+    height: 80rpx;
+}
+
+
+.icon-weixin{
+  width:70rpx;
+  height:70rpx;
+  margin-left:-38%;
+  margin-top:20%; 
+}
+.button-img{
+   border-radius:50%; 
+   width:90rpx;
+   height:90rpx;
+}

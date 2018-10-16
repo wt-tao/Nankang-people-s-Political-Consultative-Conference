@@ -1,0 +1,21 @@
+.container-release{
+  border:1px solid #e2e2e3;
+  margin:15rpx 15rpx 0 15rpx;
+  height:160rpx;
+  width:auto;  
+}
+.release{
+  font-size:30rpx;
+  padding-left:2%;
+  width: auto;
+  height: 160rpx;
+
+   
+   
+}
+.button-release{
+  background-color: orangered;
+  margin-left:79%;
+  margin-top:2% ;
+  color:#FFF;      
+}

@@ -1,0 +1,34 @@
+<!--发布-->
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view>
+<view class="container-release">
+<textarea class="release" name="Content" placeholder="说说你的看法" value='{{Content}}'></textarea>
+</view>
+ <button size="mini"class="button-release" formType="submit"> 发表</button>
+</view>
+ </form>
+ <import src="../../../src/wetoast.wxml"/>
+
+<!--最新评论-->
+<view class="comment">
+<view class="comment-panel">
+<view class="comment-border"></view>
+<view class="comment-text">最新评论</view>
+</view>
+ 
+<view class="context-panel" wx:for="{{comment}}">
+<view class="image">
+<image class="comment-icon" src="{{item.HeadImageUrl}}"></image>
+</view>
+<view class="name">
+<view class="comment-name">{{item.Name}}</view>
+<view class="comment-date">{{item.Time}}</view>
+<view class="comment-context">{{item.Content}}</view>
+</view>
+</view>
+<view class="more">
+<view class="more-text" bindtap='more'>继续查看评论></view>
+</view>
+
+</view>

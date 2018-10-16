@@ -1,0 +1,143 @@
+
+ .top{
+  width:100%;
+  height:180rpx;
+  border-bottom:1px solid #e2e2e3;
+} 
+ .middens{
+  width: 740rpx;
+  height:300rpx;
+  border-bottom:1px solid #e2e2e3;
+  
+}
+.foot{
+  width: 740rpx;
+  height:200rpx;
+} 
+ .detail-title{
+   width:90%; 
+  height: 100rpx;
+  line-height: 60rpx;
+  font-size:34rpx;
+  font-weight: bold;
+  font-family: '黑体'; 
+  text-align: center; 
+  padding-left:4%;  
+} 
+.joins{
+ font-size:30rpx;
+  font-weight: bold;
+  font-family: '黑体'; 
+  margin: 2% 0 0 2%; 
+}
+
+
+ .detail-other{
+  margin: 30rpx 0 0 0; 
+	width: 100%;
+	display: flex;
+  justify-content: space-around;
+}
+ .other{
+  font-size: 26rpx;
+  color:  gray;
+}
+.detail-context{
+ padding-top: 3rpx;
+ padding-left:8rpx; 
+ padding-right:8rpx; 
+}
+.context{
+   position:absolute;
+   left:2%;
+   right:2%;   
+   font-size: 30rpx;
+   color:  gray;
+   text-indent:2em;
+   line-height:2em;    
+}
+.midden{
+  width: auto;
+  height:20rpx;
+  background: #F0F0F0;
+}
+.list{
+  width: auto;
+  height:80rpx;
+  background:#CAFFFF;
+  font-size: 30rpx;
+  text-align: center;
+  line-height:72rpx; 
+}
+.join-panel{
+  width: auto;
+  height:100rpx;
+  border-bottom:1px solid #e2e2e3;
+  display: flex;
+}
+.name{
+  margin:5% 0 0 3%;
+  font-size:30rpx;
+  width: 12%;  
+}
+.Sign{
+  font-size:30rpx;
+   margin:5% 0 0 70%;
+}
+.comment{
+  margin-top:10%; 
+}
+.comment-panel{
+  margin-left:10rpx;
+  display: flex; 
+}
+.comment-border{ 
+  width: 8%;
+  height: 50rpx; 
+}
+.comment-text{
+  margin-left:2%; 
+  font-size:14px;
+  font-weight: bold;  
+}
+.context-panel{
+   display: flex;
+   border-bottom:1px solid #cccccc;
+   margin-top:30rpx;
+   margin-left:10rpx; 
+}
+.comment-icon{
+  width: 40px;
+  height: 90.25rpx;
+  margin-left: 3%;
+}
+.names{
+  margin-left: 30rpx;
+  line-height:50rpx; 
+  width:auto; 
+}
+.comment-name{
+  color: #FF9933;
+  font-size:32rpx;
+}
+.comment-date{
+  font-size:30rpx;
+  color: gray; 
+}
+.comment-context{
+  font-size:30rpx;
+  color: gray;
+  margin-right:3%;
+  
+}
+.comment-me{
+  margin-left:60%; 
+  font-size:14px;
+  color:red;
+  font-weight: bold;   
+}
+.image{
+  width:40px;
+  height: 90.25rpx;
+}
+

@@ -1,0 +1,32 @@
+<!--查询顶部-->
+<import src="../../../src/wetoast.wxml"/>
+<view class="top">
+  <view class="top-serach">
+    <image class="icon-serach" src="../../../images/search@3x.png" ></image>
+    <input class="serach" bindconfirm	="serach"  confirm-type="search" placeholder='履职档案查询'>
+    </input>
+  </view>
+  <view class="refresh" bindtap='refresh'>
+    <image class="icon-refresh" src='../../../images/refresh.png'></image>
+  </view>
+</view>
+
+<block wx:for="{{list}}" wx:key="{{code}}">
+  <view class="list " wx:if="{{index % 2 == 0}}" bindtap="acitivityDetail" id="{{item.ID}}">
+    <view class="panel">
+      <view class="context">{{item.Name}}</view>
+    </view>
+    <view class="image-panel" bindtap="acitivityDetail" id="{{item.ID}}">
+      <image src='../../../images/next@3x.png' class="image-icon"></image>
+    </view>
+  </view>
+  <view class="list bg-g" wx:else bindtap="acitivityDetail" id="{{item.ID}}">
+    <view class="panel">
+      <view class="context">{{item.Name}}</view>
+    </view>
+    <view class="image-panel">
+      <image src='../../../images/next@3x.png' class="image-icon"></image>
+    </view>
+  </view>
+</block>
+  <template is="wetoast" data="{{...__wetoast__}}"/>

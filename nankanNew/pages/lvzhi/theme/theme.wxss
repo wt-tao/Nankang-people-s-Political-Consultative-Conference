@@ -1,0 +1,45 @@
+
+.midden{
+  width:100%;
+  height:600rpx;  
+}
+.panel{
+  width: auto;
+  height:120rpx;
+  border-bottom:1px solid #e2e2e3;
+  display: flex;
+}
+.title{
+  margin:5% 0 0 3%;
+  color: gray;
+  font-size:30rpx; 
+}
+.context{
+  margin:5% 0 0 3%;
+  font-size:30rpx; 
+}
+.source{
+  margin:3% 0 0 3%;
+  font-size:28rpx;
+  color: gray;  
+}
+.mask{
+position: fixed;
+top: 0;
+left: 0;
+z-index: 3; 
+width: 100%;
+opacity: 0;
+}
+.canvas-box{
+  margin-left:3%;  
+}
+.erweima{
+  width: 686rpx;
+  height: 686rpx;
+}
+
+
+
+
+

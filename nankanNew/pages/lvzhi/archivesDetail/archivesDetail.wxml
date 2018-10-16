@@ -1,0 +1,116 @@
+<!--档案详情-->
+<view>
+  <view class="panel">
+    <view class="title">姓名：</view>
+    <view class="context">{{list.Name}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="title">部门：</view>
+    <view class="context">{{list.bumen}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="title">所属界别：</view>
+    <view class="context">{{list.jieBie}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="title">对口联系专委会：</view>
+    <view class="context">{{list.duikouzwh}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="title">年份：</view>
+    <view class="context">{{list.Year}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="title">完成期限：</view>
+    <view class="context">{{list.Time}}</view>
+  </view>
+</view>
+
+<!--履职评价-->
+<view class="midden"></view>
+<view class="list">履职评价</view>
+<!--政协提案-->
+<view class="evaluation-panel">
+  <view class="border"></view>
+  <view class="name">政协提案</view>
+  <view class="borderLong"></view>
+</view>
+
+<view class="evlaution">
+  <view class="evlaution-text">
+    <view class="text">撰写提案件数：
+      <text class="number">{{list.zxtaCount}}</text>
+    </view>
+    <view class="text">联名提交件数：
+      <text class="number">{{list.lmtaCount}}</text>
+    </view>
+  </view>
+  <view class="text">提案合计分数：
+    <text class="number">{{list.tianAllCount}}</text>
+  </view>
+</view>
+
+<!--社会民意-->
+<view class="evaluation-panel">
+  <view class="border"></view>
+  <view class="name">社情民意</view>
+  <view class="borderLong"></view>
+</view>
+<view class="evlaution">
+  <view class="evlaution-text">
+    <view class="text">撰写条数：
+      <text class="number">{{list.minyiCount}}</text>
+    </view>
+    <view class="text">被采纳条数：
+      <text class="number">{{list.mycainaCount}}</text>
+    </view>
+  </view>
+  <view class="text">合计分数：
+    <text class="number">{{list.minyiAllCount}}</text>
+  </view>
+</view>
+
+<!--政协会议-->
+<view class="evaluation-panel">
+  <view class="border"></view>
+  <view class="name">政协会议</view>
+  <view class="borderLong"></view>
+</view>
+<view class="evlaution">
+  <view class="evlaution-text">
+    <view class="text">参加全体会议：
+      <text class="number">{{list.qthyCount}}</text>
+    </view>
+    <view class="text">参加常委会议：
+      <text class="number">{{list.cwhyCount}}</text>
+    </view>
+  </view>
+  <view class="text">撰写合计分数：
+    <text class="number">{{list.zxhyAllCount}}</text>
+  </view>
+</view>
+
+<!--政协活动-->
+<view class="evaluation-panel">
+  <view class="border"></view>
+  <view class="name">政协活动</view>
+  <view class="borderLong"></view>
+</view>
+<view class="evlaution">
+  <view class="evlaution-text">
+    <view class="text">撰写条数：
+      <text class="number">{{list.zxhdzxCount}}</text>
+    </view>
+    <view class="text">被采纳条数：
+      <text class="number">{{list.zxhdcnCount}}</text>
+    </view>
+  </view>
+  <view class="text">合计分数：
+    <text class="number">{{list.zxhdAllCount}}</text>
+  </view>
+</view>

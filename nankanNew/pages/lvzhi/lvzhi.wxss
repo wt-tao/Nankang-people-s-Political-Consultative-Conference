@@ -1,0 +1,65 @@
+@import "/pages/tabBar/tabBar.wxss";
+.view-top{
+ height: 500rpx;
+ width: auto;
+ background:beige; 
+}
+.view-midden{
+ height: 570rpx;
+ width: auto;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ padding-top:20%; 
+}
+.nav-item{
+  width: 25%;
+  text-align: center
+}
+.icon{
+  width: 70%;
+  height: 131.25rpx;
+  padding: 10% 15%;
+}
+.text{
+   font-size:13px 
+}
+.image{
+  width: 100%;
+  height: 500rpx;
+}
+
+.dibu{
+  width: 100%;
+  height: 138rpx;
+  position: fixed;
+  bottom: 0;
+  background:#993300;
+}
+.piao1{
+  height: 8rpx;
+  width:100%;
+  position: fixed;
+  bottom: 130rpx;
+}
+.zh2{
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  flex-direction: row;
+}
+.menu{
+  height: 130rpx;
+  width: 24.5%;
+}
+.m1{
+  margin-left: 40rpx;
+  color: white;
+  font-size: 28rpx;
+}
+.icon-foot{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 70rpx;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,57 @@
+/* pages/lvzhi/activity/activity.wxss */
+.panel{
+  width: auto;
+  height:120rpx;
+  border-bottom:1px solid #e2e2e3;
+  display: flex;
+}
+.title{
+  margin:6% 0 0 3%;
+  font-family: '黑体';
+  font-size:30rpx;   
+}
+.input{
+   width:70%;
+   height:70rpx; 
+   border:1px solid #e2e2e3;
+   margin:4% 0 0 3%;
+   border-radius:5px;
+   font-size:28rpx;
+   padding-left:2%;
+}
+.down-icon{
+  width: 40rpx;
+  height: 20rpx;
+}
+.icon-panel{
+ margin-left: 85%;
+ margin-top:3%; 
+}
+.join-panel{
+  display: flex;
+}
+.all-panel{
+  margin:4% 0 0 5%;   
+}
+.all-pepole{
+  font-family: '黑体';
+  font-size:30rpx;
+}
+.some-panel{
+ margin:10% 0 0 0;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ 
+}
+.nav-item{
+  width: 25%;
+}
+.save{
+  width:80%;
+  height:70rpx;
+  line-height:60rpx;  
+  background:brown;
+  color:#FFF;  
+  margin-top:6%;  
+}

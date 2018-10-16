@@ -1,0 +1,54 @@
+<!--查询顶部-->
+<import src="../../../src/wetoast.wxml"/>
+<view>
+<view class="top">
+<view class="top-serach">
+<view bindtap="serachSumbit">
+<image class="icon-serach" src="../../../images/search@3x.png"></image>
+</view>
+<input class="serach" bindblur="serach" type='text' placeholder='活动信息查询'>
+</input>
+</view>
+<view class="refresh" bindtap='refresh'>
+<image class="icon-refresh" src='../../../images/refresh.png'></image>
+</view>
+</view>
+</view>
+<view>
+<view class="midden"  bindscroll="scroll">
+  <view wx:for="{{list}}" wx:key="{{code}}">
+    <view class="list " wx:if="{{index % 2 == 0}}">
+    <view class="panel">
+    <view class="time">{{item.hdTime}}</view>
+    <view class="activity">{{item.hdClassName}}</view>
+    <view class="office">{{item.Company}}</view>
+    <view class="name">{{item.Peoper}}</view>
+    </view>
+    <view class="context">{{item.Name}}</view>
+    <view class="image-panel" bindtap="acitivityDetail" id="{{item.ID}}"   data-joinPeoperID="{{item.joinPeoperID}}" 
+  data-signPeoperID="{{item.signPeoperID}}"> 
+    <image src='../../../images/next@3x.png' class="image-icon"></image>
+    </view>
+    </view> 
+    <view class="list bg-g" wx:else>
+     <view class="panel">
+    <view class="time">{{item.hdTime}}</view>
+    <view class="activity">{{item.hdClassName}}</view>
+    <view class="office">{{item.Company}}</view>
+    <view class="name">{{item.Peoper}}</view>
+    </view>
+    <view class="context">{{item.Name}}</view>
+    <view class="image-panel" bindtap="acitivityDetail" id="{{item.ID}}"      data-joinPeoperID="{{item.joinPeoperID}}" 
+     data-signPeoperID="{{item.signPeoperID}}"> 
+    <image src='../../../images/next@3x.png' class="image-icon"></image>
+    </view>
+     </view>
+  </view>
+  </view>
+  </view>
+  <template is="wetoast" data="{{...__wetoast__}}"/>
+  
+  <!-- <view>
+  <button class="loginout" bindtap='loginout'>退出登录</button>
+  </view> -->
+

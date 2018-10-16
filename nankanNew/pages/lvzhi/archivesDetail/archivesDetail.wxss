@@ -1,0 +1,72 @@
+.panel{
+  width: auto;
+  height:120rpx;
+  border-bottom:1px solid #e2e2e3;
+  display: flex;
+}
+.title{
+  margin:5% 0 0 3%;
+  color: gray;
+  font-size:30rpx; 
+}
+.context{
+  margin:5% 0 0 3%;
+  font-size:30rpx; 
+}
+.midden{
+  width: auto;
+  height:20rpx;
+  background: #F0F0F0;
+}
+.list{
+  width: auto;
+  height:80rpx;
+  background:#CAFFFF;
+  font-size: 30rpx;
+  text-align: center;
+  line-height:72rpx; 
+}
+.evaluation-panel{
+  width: auto;
+  height:100rpx;
+  display: flex;
+}
+.name{
+  margin:5% 0 0 3%;
+  font-size:30rpx;  
+}
+.border{
+ border:1px solid orangered;
+ background-color: orangered;
+ height:40rpx;
+ margin:2% 0 0 2%;
+ width:3%;  
+}
+.borderLong{
+ margin:2% 0 0 3%;
+ border:1px solid #e2e2e3;
+ background-color: #e2e2e3;
+ height:40rpx;
+ width:72%;  
+}
+.name{
+  margin:2% 0 0 3%;
+  font-size:30rpx;  
+}
+.evlaution{
+  line-height:180%;
+  margin-top:-3%;   
+}
+.evlaution-text{
+  width: auto;
+  display: flex;
+}
+.text{
+  margin-left: 8%;
+  font-size:30rpx;
+  width:60%;   
+}
+.number{
+   font-size:30rpx;  
+   color: red;
+}

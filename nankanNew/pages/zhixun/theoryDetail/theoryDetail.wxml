@@ -1,0 +1,50 @@
+   <import src="../../../wxParse/wxParse.wxml"/>
+   <view class="top">
+    <view class="detail-title">{{list.Title}}</view>
+  <view class="detail-other">
+    <text class="other">发布时间：{{list.Time}}</text>
+    <text class="other">作者：{{list.Source}}</text>
+  </view>
+</view>
+<scroll-view scroll-y="true" class="midden"  bindscroll="scroll">
+     <view class="context">
+    <template is="wxParse" data="{{wxParseData:da.nodes}}"/>
+    </view>
+</scroll-view> 
+      <view class="group-header">评论列表</view>
+   <view class="group-body">
+ <scroll-view scroll-y="true" bindscroll="scroll" class="hasfinancing">
+<view class="panel" id="{{item.ID}}" wx:for="{{comment}}">
+<view class="info_left">
+    <image src="{{item.HeadImageUrl}}"class="info_img"></image>
+              </view>
+              <view class="info_right">
+               <view class="through">
+                  <view class="info_title">
+                  {{item.Name}}
+                  </view>
+                    <view class="info_time">
+                  {{item.Time}}
+                  </view>
+                  </view>
+                  <view class="info_miaoshu">
+                   {{item.Content}}
+                  </view>
+              </view>
+</view>
+</scroll-view>
+</view> 
+   <view class="group-header">我要评论</view>
+   <view class="group-body">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+<view>
+<view class="container-release">
+<textarea class="release" name="Content" placeholder="评论社情" value='{{Content}}'></textarea>
+</view>
+ <view class="btn-submit">
+	   <button  type="warn" formType="submit">发表</button>
+	</view>
+</view>
+ </form>
+   </view>
+ 

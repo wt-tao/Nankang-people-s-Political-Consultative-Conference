@@ -1,0 +1,49 @@
+.comment{
+  margin-top:5%; 
+}
+
+.comment-text{
+  text-align: center;
+  font-size:14px;
+  font-weight: bold;  
+}
+.context-panel{
+   display: flex;
+   border-bottom:1px solid #cccccc;
+   margin-top:30rpx;
+   margin-left:10rpx; 
+}
+.image{
+  width:40px;
+  height: 90.25rpx;
+}
+.comment-icon{
+  width: 40px;
+  height: 90.25rpx;
+  margin-left: 3%;
+}
+.name{
+  margin-left: 30rpx;
+  line-height:50rpx; 
+  width:auto; 
+}
+.comment-name{
+  color: #FF9933;
+  font-size:32rpx;
+}
+.comment-date{
+  font-size:30rpx;
+  color: gray; 
+}
+.comment-context{
+  font-size:30rpx;
+  color: gray;
+}
+.class_item{
+  border-bottom: solid #f5f5f5 1px;
+  padding: 20px;
+}
+.class_item_end{
+  text-align: center;
+  font-size:30rpx; 
+}

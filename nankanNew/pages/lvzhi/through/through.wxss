@@ -1,0 +1,195 @@
+page {
+  background-color: white;
+}
+
+.panel {
+  width: 100%;
+  border-radius: 10rpx;
+  background: #fff;
+}
+
+.bt {
+  width: 500rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.nanm {
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+}
+
+.se {
+  width: 400rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex_box {
+  width: 249rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  background-color: gainsboro;
+}
+
+.flex_item {
+  width: 249rpx;
+  height: 100rpx;
+  flex-wrap: wrap;
+  border: 1rpx solid #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 35rpx;
+}
+
+.flex_item label {
+  width: 195rpx;
+  height: 120rpx;
+  line-height: 100rpx;
+  font-size: 35rpx;
+}
+
+.flex_box .flex_item label.active {
+  font-size: 35rpx;
+  text-align: center;
+  color: orangered;
+}
+
+.theme-panel {
+  display: flex;
+}
+
+.top {
+  width: 100%;
+  height: 140rpx;
+  background: #f0f0f0;
+  display: flex;
+  margin-top: -16rpx;
+}
+
+.top-serach {
+  padding: 30rpx 35rpx 0 30rpx;
+}
+
+.icon-serach {
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  left: 70rpx;
+  margin-top: 20rpx;
+  z-index: 5;
+}
+
+.refresh {
+  position: absolute;
+  left: 640rpx;
+  margin-top: 35rpx;
+}
+
+.icon-refresh {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.serach {
+  width: 480rpx;
+  height: 70rpx;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 28rpx;
+  background: #fff;
+  padding-left: 20%;
+}
+
+.midden {
+  width: auto;
+  height: 900rpx;
+  border-bottom: 1px solid #e2e2e3;
+}
+
+.list {
+  width: 100%;
+  height: 200rpx;
+  line-height: 120%;
+}
+
+.time {
+  margin: 3% 0 0 3%;
+  font-size: 28rpx;
+  color: red;
+}
+
+.activity {
+  margin: 3% 0 0 3%;
+  font-size: 28rpx;
+  color: gray;
+}
+
+.office {
+  margin: 3% 0 0 3%;
+  font-size: 28rpx;
+  color: gray;
+}
+
+.context {
+  margin: 3% 0 0 3%;
+  font-size: 30rpx;
+}
+
+.name {
+  margin: 3% 0 0 3%;
+  font-size: 28rpx;
+  color: gray;
+}
+
+.noSign {
+  margin: 3% 0 0 3%;
+  font-size: 28rpx;
+  color: gray;
+}
+
+.sign {
+  margin: 3% 0 0 3%;
+  font-size: 28rpx;
+  color: gray;
+}
+
+.bg-g {
+  background: #f0f0f0;
+}
+
+.image-panel {
+  margin: -10% 0 0 93%;
+}
+
+.image-icon {
+  width: 30rpx;
+  height: 50rpx;
+}
+
+/* .add{
+   border-radius:50%; 
+   width:100rpx;
+   height:100rpx;
+   margin:0 0 30% 80%;
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   bottom: 0  
+} */
+
+.add-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 0 95% 80%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+}

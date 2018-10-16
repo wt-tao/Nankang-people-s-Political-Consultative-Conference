@@ -1,0 +1,47 @@
+<!--查询顶部-->
+<import src="../../../src/wetoast.wxml"/>
+<view class="top">
+<view class="top-serach">
+<image class="icon-serach" src="../../../images/search@3x.png"></image>
+<input class="serach"  bindblur="serach"  confirm-type="search"
+placeholder='按姓名查询'>
+</input>
+</view>
+<view class="refresh" bindtap='refresh'>
+<image class="icon-refresh" src='../../../images/refresh.png'></image>
+</view>
+</view>
+
+
+<!--查询表格-->
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th" style='width:10%; margin-left:4%'>序号</view>
+    <view class="th" style='width:20%; margin-left:4%;'>姓名</view>
+    <view class="th" style='width:20%'>届次</view>
+    <view class="th" style='width:30%; margin-left:5%;'>专委会</view>
+    <view class="th" style='width:14% ;margin-left:5%' >查看</view>
+  </view>
+  
+  <block wx:for="{{list}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td" style='width:10%; margin-left:1%;'>{{item.pxid}}</view>
+      <view class="td" style='width:15%; margin-left:3%;' >{{item.Name}}</view>
+      <view class="td" style='width:20%'>{{item.jieci}}</view>
+      <view class="td" style='width:30%; margin-left:5%;'>{{item.zwh}}</view>
+      <image class="td control-icon" src="../../../images/next@2x.png" style='margin-left:5%' bindtap='memberDetail'
+      id="{{item.ID}}"></image>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td" style='width:10%; margin-left:1%;'>{{item.pxid}}</view>
+      <view class="td" style='width:15%; margin-left:3%;'>{{item.Name}}</view>
+      <view class="td" style='width:20%'>{{item.jieci}}</view>
+      <view class="td" style='width:30%; margin-left:5%;' >{{item.zwh}}</view>
+      <image class="td control-icon" src="../../../images/next@2x.png"
+      style='margin-left:5%' bindtap='memberDetail'
+      id="{{item.ID}}"></image>
+    </view>
+  </block>
+  </view>
+  <template is="wetoast" data="{{...__wetoast__}}"/>
+

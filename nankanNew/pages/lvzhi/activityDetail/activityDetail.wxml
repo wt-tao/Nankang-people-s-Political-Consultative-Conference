@@ -1,0 +1,27 @@
+<!--活动详情-->
+<view class="top">
+    <view class="detail-title">{{list.Name}}</view>
+  <view class="detail-other">
+    <text class="other">发布时间：{{list.Time}}</text>
+    <text class="other">发起人：{{list.Peoper}}</text>
+  </view>
+</view>
+<!--中部-->
+ <view  class="middens">
+ <view class="list">委员签到统计</view>
+    <view class="joins">应到:{{list.JoinPeoperNumber}}人</view>
+    <view class="joins">实到:{{list.SingPeoperNumber}}人</view>
+    <view class="joins">未到:{{list.NoSingPeoperNumber}}人</view>
+</view> 
+
+<!--参与活动委员列表-->
+<view class="midden"></view>
+<view class="list">委员签到详情</view>
+<view class="join-panel" wx:for="{{listStatus}}">
+
+<view class="name">{{item.Name}}</view>
+<view class="Sign">{{item.SignStata}}</view>
+</view>
+
+
+

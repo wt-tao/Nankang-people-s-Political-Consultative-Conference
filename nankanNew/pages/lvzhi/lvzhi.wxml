@@ -1,0 +1,25 @@
+<!--顶部-->
+<import src="../../src/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+<view class="view-top">
+<image src="{{list.imgUrl}}"
+ class="image"></image>
+</view>
+
+<!--中部导航-->
+<view class="view-midden">
+   <view class="nav-item">
+  <image src="../../images/tb7@3x.png" class="icon" bindtap="proposal"></image>
+  <text class="text">提案工作</text>
+  </view>
+  <view class="nav-item">
+  <image src="../../images/tb5@3x.png" class="icon" bindtap="through"></image>
+  <text class="text">参政记录</text>
+  </view>
+   <view class="nav-item">
+  <image src="../../images/tb6@3x.png" class="icon" bindtap="review"></image>
+  <text class="text">履职鉴评</text>
+  </view>
+</view>
+<import src="../tabBar/tabBar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>

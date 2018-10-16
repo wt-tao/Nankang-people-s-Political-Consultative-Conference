@@ -1,0 +1,15 @@
+<import src="../../src/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+<view class="page">
+<image class="bg" src="../../images/login.jpg"></image>
+</view> 
+  <text class="attentionLb">登录方式</text>
+    <view class="icon">
+    <button class="button-img" type="primary"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"><image src="../../images/weixin.png" class="icon-weixin" ></image></button>
+    </view>  
+   
+
+
+
+
+

@@ -1,0 +1,202 @@
+<import src="../../../src/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
+<view class="panel">
+  <view class='bt'>
+    <view class='nanm'>
+      <radio-group bindchange="radioCheckedChange" class="se">
+        <view class="flex_box" id='1'>
+          <view class="flex_item">
+            <label class="{{radioCheckVal==1?'active':''}}" bindtap="member">委员管理
+              <radio value="1" hidden="true"></radio>
+            </label>
+          </view>
+        </view>
+        <view class="flex_box" id='2'>
+          <view class="flex_item">
+            <label class="{{radioCheckVal==2?'active':''}}" bindtap="archives">履职档案
+              <radio value="2" hidden="true"></radio>
+            </label>
+          </view>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+
+  <!--委员管理-->
+  <view wx:if="{{show1}}">
+    <view class="panel-detail">
+      <view class="title">姓名：</view>
+      <view class="context">{{list.Name}}</view>
+    </view>
+   
+    <!--所属委员会-->
+    <view class="panel-detail">
+      <view class="title">所属专委会：</view>
+      <view class="context">{{list.zwh}}</view>
+    </view>
+
+    <!--现任职位-->
+    <view class="panel-detail">
+      <view class="title">现任职位：</view>
+      <view class="context">{{list.job}}</view>
+    </view>
+
+
+    <!--所属界别-->
+    <view class="panel-detail">
+      <view class="title">所属界别：</view>
+      <view class="context">{{list.jieci}}</view>
+    </view>
+
+    <!--对口联系专委会-->
+    <view class="panel-detail">
+      <view class="title">对口联系专委会：</view>
+      <view class="context">{{list.duikouzwh}}</view>
+    </view>
+
+    <!--联系电话-->
+    <view class="panel-detail" bindtap='phonecallevent'>
+      <view class="title">联系电话：</view>
+      <view class="context">{{list.tel}}</view>
+    </view>
+
+    <view class="foot">
+      <view class="info_left">
+         <view hidden="{{maskHidden}}" class="mask"></view>
+        <view class="canvas-box" bindtap="previewImg">
+          <canvas hidden="{{canvasHidden}}" canvas-id="mycanvas" class="image"/>
+        </view>
+      </view> 
+      
+      <view class="info_right">
+        <button class="find" bindtap='allMember'>查看所有委员</button>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!--档案管理-->
+<view wx:if="{{show2}}">
+  <view class="panel-detail">
+    <view class="title">姓名：</view>
+    <view class="context">{{archives.Name}}</view>
+  </view>
+
+  <view class="panel-detail">
+    <view class="title">界别：</view>
+    <view class="context">{{archives.jieBie}}</view>
+  </view>
+
+   <!--现任职位-->
+    <view class="panel-detail">
+      <view class="title">现在职位：</view>
+      <view class="context">{{archives.job}}</view>
+    </view>
+
+
+  <view class="panel-detail">
+    <view class="title">年度：</view>
+    <view class="context">{{archives.Year}}</view>
+  </view>
+
+  <!--履职评价-->
+  <view class="midden"></view>
+  <view class="list-evluation">履职评价</view>
+  <!--政协提案-->
+  <view class="evaluation-panel">
+    <view class="border"></view>
+    <view class="evlaution-name">政协提案</view>
+    <view class="borderLong"></view>
+  </view>
+
+  <view class="evlaution">
+    <view class="evlaution-text">
+      <view class="text">撰写提案件数：
+        <text class="number">{{archives.zxtaCount}}</text>
+      </view>
+      <view class="text">联名提交件数：
+        <text class="number">{{archives.lmtaCount}}</text>
+      </view>
+    </view>
+    <view class="text">分计分数：
+      <text class="number">{{archives.tianAllCount}}</text>
+    </view>
+  </view>
+
+  <!--社会民意-->
+  <view class="evaluation-panel">
+    <view class="border"></view>
+    <view class="evlaution-name">社情民意</view>
+    <view class="borderLong"></view>
+  </view>
+  <view class="evlaution">
+    <view class="evlaution-text">
+      <view class="text">撰写条数：
+        <text class="number">{{archives.minyiCount}}</text>
+      </view>
+      <view class="text">被采纳条数：
+        <text class="number">{{archives.mycainaCount}}</text>
+      </view>
+    </view>
+    <view class="text">分计分数：
+      <text class="number">{{archives.minyiAllCount}}</text>
+    </view>
+  </view>
+
+  <!--政协会议-->
+  <view class="evaluation-panel">
+    <view class="border"></view>
+    <view class="evlaution-name">政协会议</view>
+    <view class="borderLong"></view>
+  </view>
+  <view class="evlaution">
+    <view class="evlaution-text">
+      <view class="text">参加全体会议：
+        <text class="number">{{archives.qthyCount}}</text>
+      </view>
+      <view class="text">参加常委会议：
+        <text class="number">{{archives.cwhyCount}}</text>
+      </view>
+    </view>
+    <view class="text">分计分数：
+      <text class="number">{{archives.zxhyAllCount}}</text>
+    </view>
+  </view>
+
+  <!--政协活动-->
+  <view class="evaluation-panel">
+    <view class="border"></view>
+    <view class="evlaution-name">政协活动</view>
+    <view class="borderLong"></view>
+  </view>
+  <view class="evlaution">
+    <view class="evlaution-text">
+      <view class="text">参加次数：
+        <text class="number">{{archives.zxhdzxCount}}</text>
+      </view>
+      <view class="text">被采纳条数：
+        <text class="number">{{archives.zxhdcnCount}}</text>
+      </view>
+    </view>
+    <view class="text">分计分数：
+      <text class="number">{{archives.zxhdAllCount}}</text>
+    </view>
+  </view>
+
+<view class="evaluation-panel">
+    <view class="borderend"></view>
+  </view>
+  <view class="evlaution-end">
+    <view class="evlaution-text">
+      <view class="text">总计分数：
+        <text class="number">{{total}}</text>
+      </view>
+      <view class="text">年度排名：
+        <text class="number">{{archives.ranking}}</text>
+      </view>
+    </view>
+    </view>
+
+  <button class="find" bindtap='allarchvies'>查看所有委员履职档案</button>
+</view>

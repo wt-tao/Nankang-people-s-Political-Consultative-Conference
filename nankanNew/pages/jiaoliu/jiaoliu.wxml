@@ -1,0 +1,23 @@
+ <!--顶部-->
+<view class="view-top">
+<image src="{{list.imgUrl}}"
+ class="image"></image>
+</view>
+
+<!--中部导航-->
+<view class="view-midden">
+ <view class="nav-item">
+  <image src="../../images/tb4@3x.png" class="icon" bindtap="lecture"></image>
+  <text class="text" >理论讲堂</text>
+  </view>
+  <view class="nav-item">
+  <image src="../../images/tb2@3x.png" class="icon" bindtap="history"></image>
+  <text class="text">南康文史</text>
+  </view>
+  <view class="nav-item">
+  <image src="../../images/tb5@3x.png" class="icon" bindtap="stone"></image>
+  <text class="text">他山之石</text>
+  </view>
+</view>
+<import src="../tabBar/tabBar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>

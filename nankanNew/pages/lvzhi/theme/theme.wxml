@@ -1,0 +1,73 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+<import src="../../../src/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+<view>
+<view class="panel">
+<view class="title">活动名称：</view>
+<view class="context">{{list.Name}}</view>
+</view>
+
+<view class="panel">
+<view class="title">活动类型：</view>
+<view class="context">[{{list.hdClassName}}]</view>
+</view>
+
+<view class="panel">
+<view class="title">活动场所：</view>
+<view class="context">{{list.Address}}</view>
+</view>
+
+<view class="panel">
+<view class="title">主办单位：</view>
+<view class="context">{{list.Company}}</view>
+</view>
+</view>
+
+<!--二维码--> 
+ <view class="mask"></view>
+<view class="canvas-box" bindtap="previewImg">
+  <image class="erweima" src="{{imgurl}}" />
+</view> 
+ <!-- <image  class="canvas-box" src="{{imgurl}}"></image> -->
+
+ <!-- 报名
+ <form bindsubmit="formSubmit" bindreset="formReset">
+<view class="center">
+<view class="sign-center">
+<image class='icon-sign' src="../../../images/mb@3x.png"></image>
+<view class="sign"> 在线报名</view>
+</view>
+
+<view class="form-name">
+<view class="text">姓<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>名：</view>
+<input type="text" class="input" name="names"></input>
+</view>
+
+<view class="form-phone">
+<view class="text">电<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>话：</view>
+<input type="text" class="input" name="phone"></input>
+</view>
+
+<view class="form-job">
+<view class="text">职<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>务：</view>
+<input type="text" class="input" name="job"></input>
+</view>
+
+<view class="form-dept">
+<view class="text">部<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>门：</view>
+<picker bindchange="deptPickerChange" class="input1" value="{{deptIndex}}" range="{{deptArray}}" name="name">
+<view class="icon-panel">
+ <view>
+       <text id="{{idArray[deptIndex]}}">{{deptArray[deptIndex]}}</text>
+      </view>
+<view style="margin-right:4%;">
+<image src='../../../images/pulldown@3x.png' class='down-icon'></image>
+</view>  
+      </view>
+  </picker>
+</view>
+<button  type="warn" formType="submit" class="sign-button">立即加入</button>
+</view>
+ </form>   -->
+
+

@@ -1,0 +1,67 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+<!--顶部-->
+<view class="top">
+  <view class="detail-title">{{list.Name}}</view>
+  <view class="detail-other">
+    <text class="other">发布时间：{{list.Time}}</text>
+    <text class="other">发起人：{{list.Peoper}}</text>
+  </view>
+</view>
+<!--中部-->
+  <view class="group-header">评论列表</view>
+   <view class="group-body">
+ <scroll-view scroll-y="true" bindscroll="scroll" class="hasfinancing">
+<view class="panel" id="{{item.ID}}" wx:for="{{comment}}">
+<view class="info_left">
+    <image src="{{item.HeadImageUrl}}"class="info_img"></image>
+              </view>
+              <view class="info_right">
+               <view class="through">
+                  <view class="info_title">
+                  {{item.Name}}
+                  </view>
+                    <view class="info_time">
+                  {{item.Time}}
+                  </view>
+                  </view>
+                  <view class="info_miaoshu">
+                   {{item.Content}}
+                  </view>
+                    <view class="info_tupian">
+                    <view bindtap="previewImg" data-name="{{item.Img}}">
+                   <image src="{{item.Img}}"class="info_img" ></image></view>
+                  </view>  
+                   
+
+              </view>
+</view>
+</scroll-view>
+</view>
+ <form bindsubmit="formSubmit" bindreset="formReset">
+<view class="group-header">上传图片</view>
+			<view class="group-body">
+      <view class="img-upload">
+      <view wx:if="{{flag==true}}">
+				<image class="img-add" catchtap="chooseImageTap" src="{{uploadimgs}}"></image>
+        </view>
+      <view wx:else>  
+      	<image class="img-add" catchtap="chooseImageTap" src="../../../images/add@2x.png"></image>
+       </view>
+      </view>
+      </view>
+   <view class="group-header">我要评论</view>
+   <view class="group-body">
+<view>
+<view class="container-release">
+<textarea  name="Content" placeholder="评论活动" value='{{Content}}'></textarea>
+</view>
+ <view class="btn-submit">
+	   <button  type="warn" formType="submit" >发表</button>
+	</view>
+</view>
+   </view>
+    </form>
+
+
+
+

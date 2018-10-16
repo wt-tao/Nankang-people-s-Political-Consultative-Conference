@@ -1,0 +1,23 @@
+ <!--顶部-->
+<view class="view-top">
+<image src="{{list.imgUrl}}"
+ class="image"></image>
+</view>
+
+<!--中部导航-->
+<view class="view-midden">
+ <view class="nav-item">
+  <image src="../../images/tb3@3x.png" class="icon" bindtap="dynamic"></image>
+  <text class="text">动态公告</text>
+  </view>
+  <view class="nav-item">
+  <image src="../../images/tb1@3x.png" class="icon" bindtap="news"></image>
+  <text class="text">南康要闻</text>
+  </view>
+   <view class="nav-item">
+  <image src="../../images/tb9@3x.png" class="icon" bindtap="theory"></image>
+  <text class="text">社情民意</text>
+  </view>
+</view>
+<import src="../tabBar/tabBar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>

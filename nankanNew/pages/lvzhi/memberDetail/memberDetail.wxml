@@ -1,0 +1,48 @@
+<!--姓名-->
+<view class="panel">
+  <view class="title">姓名：</view>
+  <view class="context">{{list.Name}}</view>
+</view>
+<!--届次-->
+<view class="panel">
+  <view class="title">届次：</view>
+  <view class="context">{{list.jieci}}</view>
+</view>
+
+
+<!--所属委员会-->
+<view class="panel">
+  <view class="title">所属专委会：</view>
+  <view class="context">{{list.zwh}}</view>
+</view>
+
+<!--现任职位-->
+<view class="panel">
+  <view class="title">现任职位：</view>
+  <view class="context">{{list.job}}</view>
+</view>
+
+
+<!--所属界别-->
+<view class="panel">
+  <view class="title">所属届别：</view>
+  <view class="context">{{list.jieBie}}</view>
+</view>
+
+<!--对口联系专委会-->
+<view class="panel">
+  <view class="title">对口联系专委会：</view>
+  <view class="context">{{list.duikouzwh}}</view>
+</view>
+
+<!--联系电话-->
+<view class="panel" bindtap='phonecallevent'>
+  <view class="title">联系电话：</view>
+  <view class="context">{{list.tel}}</view>
+</view>
+
+<!--二维码--> 
+<view hidden="{{maskHidden}}" class="mask"></view>
+<view class="canvas-box" bindtap="previewImg">
+  <canvas hidden="{{canvasHidden}}" canvas-id="mycanvas" class="erweima" />
+</view>

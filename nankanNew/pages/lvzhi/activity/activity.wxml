@@ -1,0 +1,56 @@
+<!--发起新活动-->
+<view class="panel">
+<view class="title">活动名称:</view>
+<input type="text" class="input" name="number"></input>
+</view>
+
+<view class="panel">
+<view class="title">活动时间:</view>
+<input type="text" class="input" name=""></input>
+</view>
+
+<view class="panel">
+<view class="title">活动类型:</view>
+<picker class="input" name="">
+<view class="text">{{firstPerson}}</view>
+<view class="icon-panel">
+<image src='../../../images/pulldown@3x.png' class='down-icon'></image>
+</view>
+</picker>
+</view>
+
+<view class="panel">
+<view class="title">活动地址:</view>
+<input type="text" class="input" name=""></input>
+</view>
+
+<view class="panel">
+<view class="title">承包单位:</view>
+<input type="text" class="input" name=""></input>
+</view>
+
+<view class="panel">
+<view class="title">备<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>注:</view>
+<input type="text" class="input" name=""></input>
+</view>
+
+<view class="join-panel">
+<view class="title">参与人员:</view>
+
+<view class="all-panel">
+<checkbox>
+<view class="all-pepole">全部人员</view>
+</checkbox>
+
+<view class="some-panel">
+
+<view wx:for="{{list}}" class="nav-item">
+<checkbox style="  line-height:60rpx">
+<view class="all-pepole">{{item.name}}</view>
+</checkbox>
+</view>
+</view>
+</view>
+</view>
+
+<button  formType="submit" class="save">发起活动</button>

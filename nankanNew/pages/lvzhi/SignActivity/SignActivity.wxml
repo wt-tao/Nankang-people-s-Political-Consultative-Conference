@@ -1,0 +1,36 @@
+<!--活动详情-->
+<import src="../../../src/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+ <view class="top">
+    <view class="detail-title">{{list.Name}}</view>
+  <view class="detail-other">
+    <text class="other">发布时间：{{list.Time}}</text>
+    <text class="other">发起人：{{list.Peoper}}</text>
+  </view>
+</view>
+<!--中部-->
+<view  class="midden">
+    <view class="context">
+    <view class="joins">应到:{{list.JoinPeoperNumber}}人</view>
+    <view class="joins">实到:{{list.SingPeoperNumber}}人</view>
+    <view class="joins">未到:{{list.NoSingPeoperNumber}}人</view>
+    </view>
+
+</view>
+<button  type="warn" class="sign" bindtap='sign' open-type="getPhoneNumber" 
+bindgetphonenumber="getPhoneNumber">立即签到</button>
+
+<!--参与活动委员列表-->
+<view class="list{{showView?'show':''}}" bindtap="onChangeShowState">签到人员</view>
+<view class="list{{showView?'':'show'}}" bindtap="onChangeShowState">签到人员</view>
+           <view class="list{{showView?'':'show'}}">
+<view class="join-panel" wx:for="{{listStatus}}">
+<view class="name">{{item.Name}}</view>
+<view class="Sign">{{item.SignStata}}</view>
+</view>
+</view>
+
+
+
+
+

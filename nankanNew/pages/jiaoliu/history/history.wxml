@@ -1,0 +1,23 @@
+<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower">  
+<view class="panel" wx:for="{{list}}"bindtap='detail'id="{{item.ID}}">
+<view class="info_left">
+    <image src="{{item.ImgUrl}}" class="info_img"></image>
+              </view>
+              <view class="info_right">
+               <view class="through">
+                  <view class="info_title">
+                  {{item.Title}}
+                  </view>
+                    <view class="info_time">
+                     {{item.Time}}
+                  </view>
+                  </view>
+                  <view class="info_miaoshu">
+                    {{item.Description}}
+                  </view>
+                
+              </view>
+</view>
+<view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+      <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>  
+</scroll-view>

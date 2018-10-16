@@ -1,0 +1,56 @@
+{
+  "pages":[
+  "pages/guanbi/guanbi",
+  "pages/login/login",
+  "pages/lvzhi/SignActivity/SignActivity",
+
+
+  "pages/main/main",
+  "pages/zhixun/zhixun",
+  "pages/zhixun/news/news",
+  "pages/zhixun/theory/theory",
+  "pages/zhixun/theoryDetail/theoryDetail",
+  "pages/zhixun/detail/detail",
+  "pages/zhixun/dynamic/dynamic",
+  "pages/zhixun/dynamicDetail/dynamicDetail",
+  "pages/zhixun/comment/comment",
+  "pages/zhixun/moreComment/moreComment",
+  "pages/lvzhi/lvzhi",
+  "pages/lvzhi/proposal/proposal",
+  "pages/lvzhi/theme/theme",
+  "pages/lvzhi/review/review",
+  "pages/lvzhi/member/member",
+  "pages/lvzhi/process/process",
+  "pages/lvzhi/activity/activity",
+  "pages/lvzhi/memberDetail/memberDetail",
+  "pages/lvzhi/activityDetail/activityDetail",
+  "pages/lvzhi/through/through",
+  "pages/lvzhi/throughDetail/throughDetail",
+  "pages/lvzhi/proposalDetail/proposalDetail",
+  "pages/lvzhi/reportDetail/reportDetail",
+  "pages/lvzhi/handleDetail/handleDetail",
+  "pages/lvzhi/archives/archives",
+  "pages/lvzhi/archivesDetail/archivesDetail",
+  "pages/lvzhi/activityHistory/activityHistory",
+  "pages/lvzhi/activityRelease/activityRelease",
+  "pages/jiaoliu/jiaoliu",
+  "pages/jiaoliu/stone/stone",
+  "pages/jiaoliu/history/history",
+  "pages/jiaoliu/lecture/lecture",
+  "pages/jiaoliu/letureDetail/letureDetail",
+  "pages/jiaoliu/historyDetail/historyDetail",
+  "pages/jiaoliu/stoneDetail/stoneDetail",
+  "pages/tabBar/tabBar"
+
+  
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF3333",
+    "navigationBarTitleText": "南康政协",
+    "navigationBarTextStyle":"red"
+  }
+
+   
+  }
+

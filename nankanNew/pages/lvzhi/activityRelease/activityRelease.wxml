@@ -1,0 +1,110 @@
+<import src="../../../src/wetoast.wxml" />
+<view class="group">
+  <view class="group-body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="input-list">
+
+        <view class="input-item">
+          <text class="input-item-label">活动名称</text>
+          <view class="input-item-content">
+            <input type="text" placeholder="请输入活动名称" name="Name"></input>
+          </view>
+        </view>
+
+        <view class="input-item">
+          <text class="input-item-label">活动类型</text>
+          <picker class="input-item-content" bindchange="bindPickerChange" value="{{typeIndex}}" range="{{typeArray}}" name='type'>
+            <view wx:if="{{flat==true}}">
+              <text id="{{idArray[typeIndex]}}">{{typeArray[typeIndex]}}</text>
+            </view>
+            <view wx:else>
+              <view>请选择活动类型</view>
+            </view>
+          </picker>
+        </view>
+
+        <view class="input-item">
+          <text class="input-item-label">活动场所</text>
+          <view class="input-item-content">
+            <input type="text" placeholder="请输入活动地址" name="Address"></input>
+          </view>
+        </view>
+
+        <view class="input-item">
+          <text class="input-item-label">活动时间</text>
+
+
+          <picker mode="date" value="{{date}}" start="1978-01-01" end="2080-01-01" bindchange="bindDateChange" name="date">
+            <view wx:if="{{flag==true}}">
+              <view class="picker">{{dates}}</view>
+            </view>
+            <view wx:else>
+              <view>请选择日期</view>
+            </view>
+          </picker>
+          -
+          <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange" name="time">
+            <view wx:if="{{flas==true}}">
+              <view class="picker">{{times}}</view>
+            </view>
+            <view wx:else>
+              <view>请选择时间</view>
+            </view>
+          </picker>
+        </view>
+        <view class="input-item">
+          <text class="input-item-label">主办单位</text>
+          <view class="input-item-content">
+            <input type="text" placeholder="请输入主办单位" name="Company"></input>
+          </view>
+        </view>
+
+        <view class="group-header">活动勾选委员</view>
+        <view class="group-body">
+          <scroll-view scroll-y="true" bindscroll="scroll" class="hasfinancing">
+            <checkbox-group bindchange="checkboxChange">
+              <label wx:for-items="{{list}}" class="input-item">
+                <checkbox value="{{item.JCID}}" />{{item.JCName}}
+              </label>
+            </checkbox-group>
+          </scroll-view>
+          <view class="other{{showView?'show':''}} group-header" bindtap="onChangeShowState">自主邀请人员</view>
+          <view class="other{{showView?'':'show'}} group-header" bindtap="onChangeShowState">自主邀请人员</view>
+          <view class="other{{showView?'show':''}}">
+            <view class="group-1">
+              <image class="icon-serach" src="../../../images/search@3x.png"></image>
+              <input class="serach" bindblur="serach" confirm-type="search" placeholder='输入姓名查询' />
+            </view>
+            <view class="refresh" bindtap='refresh'>
+              <image class="icon-refresh" src='../../../images/refresh.png'></image>
+            </view>
+            <scroll-view scroll-y="true" bindscroll="scroll" class="hasfinancing">
+              <checkbox-group bindchange="checkboxOtherChange" data-checks="{{item.checks}}">
+                <label wx:for-items="{{listW}}" class="input-item">
+                  <checkbox data-index="{{index}}" value="{{item.ID}}" checked="{{item.checks}}" />{{item.OtherName}}
+                </label>
+              </checkbox-group>
+            </scroll-view>
+          </view>
+        </view>
+      </view>
+      <view class="group-header">勾选邀请人员列表</view>
+      <view class="group-body">
+        <scroll-view scroll-y="true" bindscroll="scroll" class="hasfinancing">
+           <!-- <checkbox-group bindchange="checkboxCancelChange" data-checks="{{item.checks}}"> -->
+            <!-- <label wx:for-items="{{other}}" class="input-item"> -->
+            <view class="join-panel" wx:for="{{other}}">
+              <view  class="name"  value="{{item.ID}}">{{item.OtherName}}</view>
+            <!-- </label> -->
+          <!-- </checkbox-group>  -->
+          </view>
+        </scroll-view>
+      </view>
+
+      <view class="btn-submit">
+        <button type="warn" formType="submit">提交</button>
+      </view>
+    </form>
+  </view>
+</view>
+<template is="wetoast" data="{{...__wetoast__}}" />

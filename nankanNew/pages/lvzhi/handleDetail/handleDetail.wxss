@@ -1,0 +1,122 @@
+ .top{
+  width:100%;
+  height:180rpx;
+  border-bottom:1px solid #e2e2e3;
+} 
+ .detail-title{
+  width:90%; 
+  height: 100rpx;
+  line-height: 60rpx;
+  font-size:34rpx;
+  font-weight: bold;
+  font-family: '黑体'; 
+  text-align: center; 
+  padding-left:4%;  
+} 
+
+ .detail-other{
+  margin: 30rpx 0 0 0; 
+	width: 100%;
+	display: flex;
+  justify-content: space-around;
+}
+ .other{
+  font-size: 26rpx;
+  color:  gray;
+}
+.panel{
+  width: auto;
+  height:220rpx;
+  border-bottom:1px solid #e2e2e3;
+}
+.through{
+  display: flex;
+}
+.info_left{
+  width: 30%;
+  overflow: auto;
+  float: left;
+}
+
+.info_right{
+  width: 65%;
+  margin-left:-15%;
+  overflow: auto;
+  float: left;
+}
+.info_img{
+  width: 40px;
+  height: 90.25rpx;
+  margin-left: 3%; 
+  margin-top: 12%;
+}
+.info_title{
+  width: 100%;
+  height: 55rpx;
+  margin-top:30rpx;
+  color: #FF9933;
+  font-size:32rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;  
+
+}
+.info_miaoshu{
+  width: 98%;
+  height:120rpx;  
+  font-size:28rpx;
+  line-height:40rpx; 
+  text-overflow: -o-ellipsis-lastline;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  display: -webkit-box;  
+  -webkit-line-clamp: 3;  
+  -webkit-box-orient: vertical;
+  color: #666666;
+  margin:1% 0 0 0;
+}
+.info_time{
+   width: 170%;
+   text-align: right;
+   font-size:30rpx;
+   color: gray; 
+   margin:7% 3% 0 0;
+}
+.hasfinancing{
+  width: 100%;
+  height: 800rpx;
+}
+.group{
+	display: block;
+	width: 100%;
+}
+.group-header{
+	line-height: 70rpx;
+	display: flex;
+	padding: 0 20rpx;
+	background: #f9f9f9;
+  width: 95%;
+  margin-top:3%; 
+	font-size: 30rpx;
+}
+.group-body{
+	background: #fff;
+	border-top: 1rpx solid #ddd;
+}
+
+.container-release{
+  border:1px solid #e2e2e3;
+  margin:15rpx 15rpx 0 15rpx;
+  height:160rpx;
+  width:auto;  
+}
+.release{
+  font-size:30rpx;
+  padding-left:2%;
+  width: auto;
+  height: 160rpx;  
+}
+.btn-submit{
+	padding: 20rpx;
+}      
+

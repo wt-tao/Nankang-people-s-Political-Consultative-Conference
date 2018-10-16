@@ -1,0 +1,23 @@
+<!--最新评论-->
+<view class="comment">
+<view class="comment-text">全部评论</view>
+</view>
+ 
+<view class="context-panel" wx:for="{{comment}}">
+<view class="image">
+<image class="comment-icon" src="{{item.HeadImageUrl}}"></image>
+</view>
+<view class="name">
+<view class="comment-name">{{item.Name}}</view>
+<view class="comment-date">{{item.Time}}</view>
+<view class="comment-context">{{item.Content}}</view>
+</view>
+</view>
+ <view wx:if="{{title}}">
+ </view>
+  <view wx:else>
+  <view class="class_item class_item_end">
+    {{title}}
+  </view>
+  </view>
+  

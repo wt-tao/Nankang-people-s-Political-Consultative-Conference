@@ -1,0 +1,19 @@
+<view class="panel" wx:for="{{list}}"bindtap='detail'id="{{item.ID}}">
+<view class="info_left">
+    <image src="{{item.ImgUrl}}" class="info_img"></image>
+              </view>
+              <view class="info_right">
+               <view class="through">
+                  <view class="info_title">
+                  {{item.Title}}
+                  </view>
+                    <view class="info_time">
+                     {{item.Time}}
+                  </view>
+                  </view>
+                  <view class="info_miaoshu">
+                    {{item.Description}}
+                  </view>
+                
+              </view>
+</view>

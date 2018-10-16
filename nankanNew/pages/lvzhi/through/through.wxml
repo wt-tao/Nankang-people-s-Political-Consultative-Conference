@@ -1,0 +1,138 @@
+<import src="../../../src/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+<view class="panel">
+  <view class='bt'>
+    <view class='nanm'>
+      <radio-group bindchange="radioCheckedChange" class="se">
+        <view class="flex_box"id='1'>
+          <view class="flex_item">
+            <label class="{{radioCheckVal==1?'active':''}}"  bindtap="activityTheme">活动发起
+              <radio value="1" hidden="true"></radio>
+            </label>
+          </view>
+        </view>
+        <view class="flex_box"id='2'>
+          <view class="flex_item">
+            <label class="{{radioCheckVal==2?'active':''}}"  bindtap="history">活动签到
+              <radio value="2" hidden="true"></radio>
+            </label>
+          </view>
+        </view>
+        <view class="flex_box" id='3'>
+          <view class="flex_item">
+            <label class="{{radioCheckVal==3?'active':''}}"  bindtap="record">活动记录
+              <radio value="3" hidden="true"></radio>
+            </label>
+          </view>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+
+  <!--活动主题-->
+  <view wx:if="{{show1}}">
+
+    <block wx:for="{{list}}" wx:key="{{code}}">
+      <view class="list" wx:if="{{index % 2 == 0}}"  bindtap="theme" id="{{item.ID}}">
+        <view class='theme-panel'>
+          <view class="time">{{item.hdTime}}</view>
+          <view class="activity">{{item.hdClassName}}</view>
+          <view class="office">发起人：{{item.Peoper}}</view>
+        </view>
+        <view class="context">{{item.Name}}</view>
+          <view class="sign">参加人员总数：{{item.JoinPeoperNumber}}</view>
+         <view class="image-panel"> 
+          <image src='../../../images/next@3x.png' class="image-icon"></image>
+        </view>
+      </view>
+       
+      <view class="list bg-g" wx:else  bindtap="theme" id="{{item.ID}}">
+        <view class='theme-panel'>
+          <view class="time">{{item.hdTime}}</view>
+          <view class="activity">{{item.hdClassName}}</view>
+          <view class="office">发起人：{{item.Peoper}}</view>
+        </view>
+        <view class="context">{{item.Name}}</view>
+          <view class="sign">参加人员总数：{{item.JoinPeoperNumber}}</view>
+        <view class="image-panel">
+          <image src='../../../images/next@3x.png' class="image-icon"></image>
+        </view>
+      </view>
+    </block>
+   <image src="../../../images/add@2x.png" class="add-icon"  bindtap='add'></image>
+
+  </view>
+ 
+  
+  <!--活动签到-->
+  <view wx:if="{{show2}}">
+    <block wx:for="{{list}}" wx:key="{{code}}" >
+      <view class="list" wx:if="{{index % 2 == 0}}"  bindtap="acitivityDetail" id="{{item.ID}}"   data-joinPeoperID="{{item.joinPeoperID}}" 
+  data-signPeoperID="{{item.signPeoperID}}">
+        <view class='theme-panel'>
+          <view class="time">{{item.hdTime}}</view>
+          <view class="activity">{{item.hdClassName}}</view>
+          <view class="office">发起人：{{item.Peoper}}</view>
+        </view>
+         <view class="context">{{item.Name}}</view>
+           <view class='theme-panel'>
+           <view class="sign">签到人员总数：{{item.SingPeoperNumber}}</view>
+             <view class="noSign">未签到人员总数：{{item.NoSingPeoperNumber}}</view>
+           </view>
+         <!-- <view wx:for="{{join}}">
+        </view> -->
+        <view class="image-panel"> 
+          <image src='../../../images/next@3x.png' class="image-icon"></image>
+        </view>
+      </view>
+      <view class="list bg-g" wx:else  bindtap="acitivityDetail" id="{{item.ID}}"   data-joinPeoperID="{{item.joinPeoperID}}" 
+  data-signPeoperID="{{item.signPeoperID}}"> 
+        <view class='theme-panel'>
+          <view class="time">{{item.hdTime}}</view>
+          <view class="activity">{{item.hdClassName}}</view>
+          <view class="office">发起人：{{item.Peoper}}</view>
+        </view>
+        <view class="context">{{item.Name}}</view>
+              <view class='theme-panel'>
+           <view class="sign">签到人员总数：{{item.SingPeoperNumber}}</view>
+             <view class="noSign">未签到人员总数：{{item.NoSingPeoperNumber}}</view>
+           </view>
+     <view class="image-panel"> 
+    <image src='../../../images/next@3x.png' class="image-icon"></image>
+    </view>
+      </view>
+    </block>
+  </view>
+
+
+  <!--活动记录-->
+  <view wx:if="{{show3}}">
+   <block wx:for="{{list}}" wx:key="{{code}}" >
+      <view class="list" wx:if="{{index % 2 == 0}}"  bindtap="report" id="{{item.ID}}">
+        <view class='theme-panel'>
+          <view class="time">{{item.hdTime}}</view>
+          <view class="activity">{{item.hdClassName}}</view>
+          <view class="office">发起人：{{item.Peoper}}</view>
+        </view>
+        <view class="context">{{item.Name}}</view>
+           <view class="sign">活动记录总数：{{item.Views}}</view>
+         <view class="image-panel"> 
+          <image src='../../../images/next@3x.png' class="image-icon"></image>
+        </view>
+      </view>
+      <view class="list bg-g" wx:else  bindtap="report"  id="{{item.ID}}">
+        <view class='theme-panel'>
+          <view class="time">{{item.hdTime}}</view>
+          <view class="activity">{{item.hdClassName}}</view>
+          <view class="office">发起人：{{item.Peoper}}</view>
+        </view>
+        <view class="context">{{item.Name}}</view>
+        <view class="sign">活动记录总数：{{item.Views}}</view>
+        <view class="image-panel">
+          <image src='../../../images/next@3x.png' class="image-icon"></image>
+        </view>
+      </view>
+    </block>
+
+</view>
+</view>

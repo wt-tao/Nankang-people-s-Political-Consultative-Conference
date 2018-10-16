@@ -1,0 +1,77 @@
+<swiper class="swiper-box" indicator-dots="true" autoplay="true"
+ interval="5000" duration="1000">
+  <block wx:for="{{lunbotu}}" wx:for-index="index">
+    <swiper-item>
+      <image src="{{item.imgUrl}}" class="slide-image" mode="aspectFill" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--导航栏-->
+<view class="tab">
+  <view class="nav-item">
+    <image src="../../images/tb1@2x.png" class="icon" bindtap="news"></image>
+    <text class="text">南康要闻</text>
+  </view>
+
+  <view class="nav-item">
+    <image src="../../images/tb7@2x.png" class="icon" bindtap="proposal"></image>
+    <text class="text">提案工作</text>
+  </view>
+  <view class="nav-item">
+    <image src="../../images/tb5@2x.png" class="icon" bindtap="through"></image>
+    <text class="text">监督调研</text>
+  </view>
+
+  <view class="nav-item">
+    <image src="../../images/tb6@2x.png" class="icon" bindtap='review'></image>
+    <text class="text">履职鉴评</text>
+  </view>
+
+
+  <view class="nav-item">
+    <image src="../../images/tb9@2x.png" class="icon" bindtap="theory"></image>
+    <text class="text">理论热点</text>
+  </view>
+
+  <view class="nav-item">
+    <image src="../../images/tb4@2x.png" class="icon" bindtap='lecture'></image>
+    <text class="text">政协讲堂</text>
+  </view>
+
+  <view class="nav-item">
+    <image src="../../images/tb8@2x.png" class="icon" bindtap="stone"></image>
+    <text class="text">他山之石</text>
+  </view>
+  <view class="nav-item">
+
+    <image src="../../images/tb2@2x.png" class="icon" bindtap='history'></image>
+    <text class="text">南康文史</text>
+  </view>
+
+
+
+</view>
+
+<!--动态-->
+
+
+<view class="new">
+  <view class="new-title">
+    <view class="new-left">动态公告</view>
+    <view class="new-right" bindtap="more">
+      <image class="icon-more" src="../../images/next@2x.png"></image>
+    </view>
+  </view>
+
+  <view wx:for="{{list}}">
+    <view class="info">
+      <view class="info-left">
+        <image class="icon-context" src="../../images/tb10@2x.png"></image>
+        <view class="info_title" bindtap='announcement' id="{{item.ID}}">
+          {{item.Title}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
